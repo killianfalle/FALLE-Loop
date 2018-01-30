@@ -1,0 +1,47 @@
+/**
+ * @(#)FalleLoopActivity.java
+ *
+ *
+ * @author 
+ * @version 1.00 2018/1/16
+ */
+ 
+import javax.swing.JOptionPane;
+
+public class FalleLoopActivity {
+    public static void main(String[] args) {
+    	
+	int Range;
+	String ans="y";
+	while (ans.equals("y")) {
+		
+		
+		 do {		//does not accept 4 and negative value
+ 			       
+    	Range = Integer.parseInt(JOptionPane.showInputDialog("Enter a number with the range of 5 - 100:"));
+    	            
+    	} while (Range <= 4 || Range >= 101);
+	    
+	    
+	    
+	     int num1 = 0;
+	        int num2 = 1;
+	
+	        for(int i = 1; i <= Range; i++)
+	        {
+	            num1 = num1 + num2;
+	            num2 = num1 - num2;
+	            if (num1 > Range){
+	            	break;
+	            }
+	            JOptionPane.showMessageDialog(null ," " + num1);
+	            
+	        }
+	
+	     
+	        ans = JOptionPane.showInputDialog("Try Again [y/n]?");
+			}	
+	    }
+	}
+	
+\
